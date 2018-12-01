@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: head"></head>
+
+  <body>
+
+  <nav th:replace="nav :: nav"></nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')" th:style="'background-image:url(' + @{/img/post-bg.jpg} + ');'">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1 th:text="${post.title}"></h1>
+              <h2 class="subheading" th:text="${post.topic}"></h2>
+              <span class="meta">Posted by <span th:text="${post.created_date}"></span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p th:text="${post.content}"></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+  <nav th:replace="footer :: footer"></nav>
+
+  </body>
+
+</html>

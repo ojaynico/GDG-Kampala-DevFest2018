@@ -1,0 +1,14 @@
+<!-- Page Header -->
+<header xmlns:th="http://www.thymeleaf.org" th:fragment="header(image, title, subheading)" class="masthead" th:style="'background-image:url(' + @{/img/} + '' + ${image} + ');'">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1 th:text="${title}"></h1>
+                    <span class="subheading" th:text="${subheading}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

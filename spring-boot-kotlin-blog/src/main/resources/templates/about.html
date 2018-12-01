@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: head"></head>
+  <body>
+
+  <nav th:replace="nav :: nav"></nav>
+
+  <header th:replace="header :: header('about-bg.jpg', 'About GDG Kampala', 'The biggest developer community.')"></header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            GDG Kampala is a member of Google Technology User Groups (GDGs). These are user groups for people who are interested in Google's developer technology.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+  <nav th:replace="footer :: footer"></nav>
+
+  </body>
+
+</html>
